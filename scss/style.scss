@@ -1,0 +1,300 @@
+/* VARIABLES */
+$primaryColor: #1C2530;
+$secondaryColor: #F7B661;
+$textColor: #666;
+$white: #fff;
+$black: #000;
+$weight400: 400;
+$weight500: 500;
+$weight600: 600;
+$weight700: 700;
+
+
+/* COMMON */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rokkitt', serif;
+}
+
+// MIXINS
+@mixin partialFlex {
+    display: flex;
+}
+
+@mixin flexbox {
+    @include partialFlex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin image {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+@mixin anchor {
+    text-decoration: none;
+    color: var(--black);
+    display: inline-block;
+}
+
+@mixin list--items {
+    list-style: none;
+}
+
+@mixin paragraph {
+    line-height: 1.5;
+}
+
+@mixin section {
+    padding-block: 100px;
+}
+
+@mixin container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@mixin commonBtn {
+    padding: 10px 40px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: var(--weight600);
+    transition: all ease-in .3s;
+}
+
+// GLOBAL CSS
+img {
+    @include image;
+}
+
+a {
+    @include anchor;
+}
+
+li {
+    @include list--items;
+}
+
+p {
+    @include paragraph;
+}
+
+section {
+    @include section;
+}
+
+.container {
+    @include container;
+}
+
+.btn {
+    @include commonBtn;
+}
+
+.btn-primary {
+    @include commonBtn;
+    background-color: $primaryColor;
+    color: $secondaryColor;
+}
+
+.btn-primary:hover {
+    background-color: $secondaryColor;
+    color: $primaryColor;
+}
+
+.btn-secondary {
+    @include commonBtn;
+    background-color: $secondaryColor;
+    color: $primaryColor;
+}
+
+
+
+/* Header */
+header {
+    padding: relative;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-block: 20px;
+    background-color: $white;
+    z-index: 99999;
+
+    &__row {
+        @include flexbox;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        img {
+            width: 200px;
+        }
+    }
+
+    &__nav {
+        @include partialFlex;
+        align-items: center;
+        gap: 22px;
+        font-size: 18px;
+    }
+}
+
+/* BANNER*/
+.banner {
+    background-image: url("../assests/images/banner__img.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 100px 0 150px 0;
+    margin-top: 96px;
+
+    &__body {
+        max-width: 600px;
+    }
+
+    &__head {
+        h1 {
+            font-size: 60px;
+            color: $secondaryColor;
+        }
+    }
+
+    &__text {
+        p {
+            color: $white;
+            margin-block: 40px;
+            font-size: 25px;
+        }
+    }
+
+    &__button {
+        .btn {
+            background-color: $secondaryColor;
+            color: $primaryColor;
+        }
+    }
+}
+
+/* INTRODUCTION OF GANA SEWA */
+.intro {
+    &__content {
+        font-size: 20px;
+        text-align: center;
+
+        p:nth-child(2) {
+            margin-block: 30px;
+        }
+    }
+}
+
+/* INFOMATION FLASH CARDS */
+.info {
+    &__cards {
+        height: 100vh;
+        padding-bottom: 0;
+
+        &--row {
+            height: 100%;
+            width: 100%;
+            @include partialFlex;
+        }
+    }
+
+    &__card {
+
+        &--courses,
+        &--textile {
+            width: 50%;
+            height: 100%;
+            padding: 100px;
+            text-align: center;
+            color: $white;
+        }
+
+        &--textile {
+            background-color: $primaryColor;
+        }
+
+        &--courses {
+            background-color: $secondaryColor;
+        }
+    }
+}
+
+// Poverty end
+.poverty {
+    &__wrapper {
+        @include partialFlex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__images {
+        @include partialFlex;
+        flex-direction: column;
+        gap: 10px;
+        width: 30%;
+        margin-right: -100px;
+        z-index: 9;
+
+        img {
+            width: 450px;
+            border-radius: 10px;
+        }
+    }
+
+    &__donation {
+        background-color: $primaryColor;
+        width: 70%;
+        height: 600px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        padding: 100px 200px;
+        @include flexbox;
+        flex-direction: column;
+    }
+
+    &__heading {
+        text-align: center;
+        margin-bottom: 30px;
+
+        p {
+            font-size: 50px;
+            line-height: 1;
+            font-weight: $weight600;
+            color: $white;
+
+            span {
+                color: $secondaryColor;
+            }
+        }
+    }
+
+    &__supportText {
+        text-align: center;
+        letter-spacing: 0.7px;
+        line-height: 1.5;
+        color: $white;
+        margin-bottom: 40px;
+        font-size: 26px;
+    }
+    &__button{
+        .btn{
+            font-weight: bold;
+            font-size: 22px;
+        }
+    }
+}
