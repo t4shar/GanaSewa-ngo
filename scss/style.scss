@@ -300,3 +300,162 @@ header {
     }
 }
 
+// Thank you Banner
+.thankyou {
+    background-image: url("../assests/images/poverty__banner.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-block: 200px;
+    position: relative;
+    margin-bottom: 100px;
+    &__overlay {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #00000059;
+    }
+
+    &__banner--content {
+        z-index: 9;
+        position: relative;
+        p {
+            font-size: 2.5rem;
+            color: $white;
+        }
+    }
+}
+
+
+// footer
+.footer {
+    background-color: $primaryColor;
+    position: relative;
+
+    &__wrapper {
+        @include partialFlex;
+        justify-content: space-between;
+    }
+
+    &__right--side {
+        max-width: 60%;
+        width: 100%;
+    }
+
+    &__heading {
+        margin-bottom: 50px;
+
+        img {
+            width: 200px;
+        }
+    }
+
+    &__content {
+        margin-bottom: 50px;
+
+        p {
+            color: $white;
+            font-size: 1.25rem;
+        }
+    }
+
+    &__subscribe--form {
+        p {
+            font-size: 2rem;
+            color: $white;
+            font-weight: $weight600;
+        }
+
+        .news__form {
+            input {
+                padding: 19px 25px 19px 25px;
+                width: 50%;
+                border-radius: 10px;
+                border: none;
+                outline: none;
+                font-size: 1.2rem;
+            }
+
+            a {
+                color: $primaryColor;
+                margin-left: 10px;
+                background-color: $secondaryColor;
+                padding: 19px 25px 19px 25px;
+                border-radius: 10px;
+                font-size: 1.2rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                border: 4px solid $secondaryColor;
+                transition: all ease 0.3s;
+            }
+
+            a:hover {
+                background-color: transparent;
+                border: 4px solid $secondaryColor;
+                color: $secondaryColor;
+            }
+        }
+    }
+
+    &__banner {
+        background-color: $secondaryColor;
+        padding: 90px 50px 50px 50px;
+        border-radius: 0px 0px 10px 10px;
+        max-width: 40%;
+        width: 100%;
+        margin-left: 100px;
+        margin-top: -100px;
+    }
+
+    &__list--upper {
+        ul {
+            padding-left: 0;
+            @include partialFlex;
+            flex-direction: column;
+            gap: 15px;
+
+            li {
+                font-size: 2rem;
+                font-weight: $weight600;
+                transition: all ease 0.3s;
+            }
+
+            li:hover {
+                color: #3d5e87;
+            }
+        }
+    }
+
+    &__list--icons {
+        @include partialFlex;
+        gap: 40px;
+        margin-top: 50px;
+
+        i {
+            color: $primaryColor;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all ease 0.3s;
+        }
+
+        i:hover {
+            color: #3d5e87;
+        }
+    }
+
+    &__copyright {
+        position: absolute;
+        bottom: 0;
+        @include flexbox;
+        width: 80%;
+
+        p {
+            color: $white;
+            font-size: 1.5rem;
+        }
+    }
+}
