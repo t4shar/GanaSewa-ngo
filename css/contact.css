@@ -1,0 +1,338 @@
+/* VARIABLES */
+/* COMMON */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rokkitt", serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  line-height: 1.5;
+}
+
+section {
+  padding-block: 100px;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 10px 40px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: var(--weight600);
+  transition: all ease-in 0.3s;
+}
+
+.btn-primary {
+  padding: 10px 40px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: var(--weight600);
+  transition: all ease-in 0.3s;
+  background-color: #1C2530;
+  color: #F7B661;
+}
+
+.btn-primary:hover {
+  background-color: #F7B661;
+  color: #1C2530;
+}
+
+.btn-secondary {
+  padding: 10px 40px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: var(--weight600);
+  transition: all ease-in 0.3s;
+  background-color: #F7B661;
+  color: #1C2530;
+}
+
+/* Header */
+header {
+  padding: relative;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-block: 20px;
+  background-color: #fff;
+  z-index: 99999;
+}
+.header__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+.header__logo img {
+  width: 200px;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 18px;
+}
+
+/* BANNER*/
+.banner {
+  background-image: url("../assests/images/banner__img.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 100px 0 150px 0;
+  margin-top: 96px;
+}
+.banner__body {
+  max-width: 600px;
+}
+.banner__head h1 {
+  font-size: 60px;
+  color: #F7B661;
+}
+.banner__text p {
+  color: #fff;
+  margin-block: 40px;
+  font-size: 25px;
+}
+.banner__button .btn {
+  background-color: #F7B661;
+  color: #1C2530;
+}
+
+/* INTRODUCTION OF GANA SEWA */
+.intro__content {
+  font-size: 20px;
+  text-align: center;
+}
+.intro__content p:nth-child(2) {
+  margin-block: 30px;
+}
+
+/* INFOMATION FLASH CARDS */
+.info__cards {
+  height: 100vh;
+  padding-bottom: 0;
+}
+.info__cards--row {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.info__card--courses, .info__card--textile {
+  width: 50%;
+  height: 100%;
+  padding: 100px;
+  text-align: center;
+  color: #fff;
+}
+.info__card--textile {
+  background-color: #1C2530;
+}
+.info__card--courses {
+  background-color: #F7B661;
+}
+
+.poverty__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.poverty__images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 30%;
+  margin-right: -100px;
+  z-index: 9;
+}
+.poverty__images img {
+  width: 450px;
+  border-radius: 10px;
+}
+.poverty__donation {
+  background-color: #1C2530;
+  width: 70%;
+  height: 600px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 100px 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.poverty__heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.poverty__heading p {
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 600;
+  color: #fff;
+}
+.poverty__heading p span {
+  color: #F7B661;
+}
+.poverty__supportText {
+  text-align: center;
+  letter-spacing: 0.7px;
+  line-height: 1.5;
+  color: #fff;
+  margin-bottom: 40px;
+  font-size: 26px;
+}
+.poverty__button .btn {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.contact {
+  display: flex;
+  width: 100%;
+  background-color: rgb(222, 244, 244);
+}
+
+.left {
+  height: 60vh;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.left__head {
+  margin: 0 3rem;
+  font-family: "Rokkitt", serif;
+  font-size: 3rem;
+}
+.left__des {
+  margin: 0 3rem;
+  font-family: "Rokkitt", serif;
+  font-size: 1.5rem;
+}
+
+.contactcards {
+  display: flex;
+  padding-block: 50px;
+  justify-content: space-around;
+}
+
+.right {
+  background-image: url(../assests/images/img-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  width: 55%;
+  border-top-left-radius: 200px;
+  border-bottom-left-radius: 200px;
+}
+
+.card {
+  background-color: rgba(208, 234, 234, 0.5);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  text-align: center;
+}
+.card__head {
+  font-family: "Rokkitt", serif;
+  font-size: 1.7rem;
+  margin: 1rem 0;
+  color: rgb(62, 61, 61);
+}
+.card__des {
+  font-family: "Rokkitt", serif;
+  font-size: 1.3rem;
+  color: rgb(146, 126, 126);
+  margin: 1rem 0;
+}
+.card__contact {
+  color: blue;
+  font-size: 1.3rem;
+}
+
+.ContactBanner {
+  padding-block: 50px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.form__container {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.form {
+  padding-block: 50px;
+}
+.form__head {
+  font-family: "Rokkitt", serif;
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin: 15px 0;
+}
+.form__des {
+  font-family: "Rokkitt", serif;
+  font-size: 1.3rem;
+  color: #6c757d;
+  margin: 15px 0;
+}
+.form__row {
+  width: 100%;
+  margin: 20px 0;
+}
+.form input, .form label {
+  display: block;
+}
+.form label {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.form input {
+  font-size: 1.2rem;
+  padding: 10px;
+  width: 100%;
+  color: #6c757d;
+}
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2rem;
+  color: #6c757d;
+}

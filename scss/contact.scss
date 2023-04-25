@@ -1,0 +1,131 @@
+@import "style";
+
+.contact {
+    display: flex;
+    width: 100%;
+    background-color: rgb(222, 244, 244);
+}
+
+@mixin mx($var) {
+    margin: 0 $var;
+}
+
+@mixin my($var) {
+    margin: $var 0;
+}
+
+@mixin fontbasic($size) {
+    font-family: 'Rokkitt', serif;
+    font-size: $size;
+
+}
+
+.left {
+    height: 60vh;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__head {
+        @include mx(3rem);
+        @include fontbasic(3rem);
+    }
+
+    &__des {
+        @include mx(3rem);
+        @include fontbasic(1.5rem);
+    }
+}
+
+.contactcards {
+    display: flex;
+    padding-block: 50px;
+    justify-content: space-around;
+}
+
+.right {
+    background-image: url(../assests/images/img-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    width: 55%;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+}
+
+.card {
+    background-color: rgba(208, 234, 234, 0.5);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    text-align: center;
+
+    &__head {
+        @include fontbasic(1.7rem);
+        @include my(1rem);
+        color: rgb(62, 61, 61)
+    }
+
+    &__des {
+        @include fontbasic(1.3rem);
+        color: rgb(146, 126, 126);
+        @include my(1rem)
+    }
+
+    &__contact {
+        color: blue;
+        font-size: 1.3rem;
+    }
+}
+.ContactBanner{
+    padding-block: 50px;
+}
+.text-center{
+    text-align: center;
+}
+.form__container{
+    width: 600px;
+    margin: 0 auto;
+}
+
+.form{
+    padding-block: 50px;
+    &__head{
+        @include fontbasic(2.3rem);
+        font-weight: bold;
+        @include my(15px);
+    }
+    &__des{
+        @include fontbasic(1.3rem);
+        color: #6c757d;
+        @include my(15px);
+    }
+    &__row{
+        width: 100%;
+        margin: 20px 0;
+    }
+    input,label{
+        display: block;
+    }
+    label{
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+    input{
+        font-size: 1.2rem;
+        padding: 10px;
+        width: 100%;
+        color: #6c757d;
+    }
+    textarea{
+        width: 100%;
+        padding: 10px;
+        font-size: 1.2rem;
+        color: #6c757d;
+
+    }
+}
